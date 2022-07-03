@@ -8,5 +8,11 @@ hex.Draw();
 Circle circle = new Circle("Cindy");
 circle.Draw();
 
+Shape[] myShapes = { new Hexagon(), new Circle(),
+    new Hexagon("Lily"),new Circle("Alla"), new Hexagon("Tratra") };
+foreach (Shape myShape in myShapes)
+{
+    myShape.Draw();
+}
 
 Console.ReadLine();
