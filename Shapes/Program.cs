@@ -67,10 +67,29 @@ for (int i = 0; i < myShapes2.Length; i++)
     Console.WriteLine();
 }
 
+
+Shape[] myShapes3 = {new Hexagon(), new Circle("Krug"),
+    new Triangle("Treug"),new Circle(),new Hexagon("Kvadrat")};
+
+IPointy? firstPointyItem = FindFirstPointyShape(myShapes3);
+
+Console.WriteLine($"The item has {firstPointyItem.Points} points.");
+
+
 static void DrawIn3D(IDraw3D draw3d)
 {
     Console.WriteLine("-> Drawing Idraw3D compatible type");
     draw3d.Draw3D();
+}
+
+static IPointy? FindFirstPointyShape(Shape[] shapes)
+{
+    foreach (Shape s in shapes)
+    {
+        if (s is IPointy ipointy)
+            return ipointy;
+    }
+    return null;
 }
 
 #endregion
