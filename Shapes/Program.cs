@@ -44,6 +44,14 @@ catch (InvalidCastException e)
     Console.WriteLine(e.Message);
 }
 
+Hexagon hexagon2 = new Hexagon("Peter");
+IPointy ipointy2 = hexagon2 as IPointy;
+
+if (ipointy2 != null)
+    Console.WriteLine($"Points: {ipointy2.Points}");
+else
+    Console.WriteLine("OOPs... Not pointy!");
+
 #endregion
 
 
