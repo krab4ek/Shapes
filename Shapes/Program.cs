@@ -62,10 +62,16 @@ for (int i = 0; i < myShapes2.Length; i++)
         Console.WriteLine($"-> Points: {ip.Points}");
     else
         Console.WriteLine($"{myShapes2[i].PetName}, is not pointy!");
+    if (myShapes2[i] is IDraw3D)
+        DrawIn3D((IDraw3D)myShapes2[i]);
     Console.WriteLine();
 }
 
-
+static void DrawIn3D(IDraw3D draw3d)
+{
+    Console.WriteLine("-> Drawing Idraw3D compatible type");
+    draw3d.Draw3D();
+}
 
 #endregion
 

@@ -1,6 +1,6 @@
 ﻿namespace Shapes
 {
-    internal class Hexagon : Shape, IPointy
+    internal class Hexagon : Shape, IPointy, IDraw3D
     {
         public Hexagon() { }
 
@@ -16,7 +16,9 @@
 
         }
 
-
-
+        public void Draw3D()
+        {
+            Console.WriteLine($"Drawing Hexagon in 3D!");
+        }
     }
 }

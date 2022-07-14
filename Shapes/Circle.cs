@@ -1,6 +1,6 @@
 ﻿namespace Shapes
 {
-    internal class Circle : Shape, IPointy
+    internal class Circle : Shape, IDraw3D
     {
         public Circle() { }
         public Circle(string name) : base(name) { }
@@ -14,6 +14,9 @@
             Console.WriteLine($"Drawing {PetName} the Circle");
         }
 
-
+        public void Draw3D()
+        {
+            Console.WriteLine("Drawing Circle in 3D!");
+        }
     }
 }
