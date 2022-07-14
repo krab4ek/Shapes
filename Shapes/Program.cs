@@ -52,6 +52,21 @@ if (ipointy2 != null)
 else
     Console.WriteLine("OOPs... Not pointy!");
 
+Shape[] myShapes2 = { new Hexagon(),new Circle(),
+    new Triangle("Joe"),new Circle("JoJo")};
+for (int i = 0; i < myShapes2.Length; i++)
+{
+    myShapes2[i].Draw();
+
+    if (myShapes2[i] is IPointy ip)
+        Console.WriteLine($"-> Points: {ip.Points}");
+    else
+        Console.WriteLine($"{myShapes2[i].PetName}, is not pointy!");
+    Console.WriteLine();
+}
+
+
+
 #endregion
 
 
